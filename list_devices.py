@@ -3,20 +3,26 @@ list_devices.py - List all Meross devices and their IDs.
 Run this to find the device_id values to put in config.yaml.
 
 Usage:
-    venv\Scripts\python list_devices.py
+    venv\\Scripts\\python list_devices.py
 """
 
 import asyncio
+import os
 import sys
+
+CONFIG_PATH = os.path.join(os.path.dirname(__file__), "config.yaml")
 
 
 async def _list():
     from meross_iot.http_api import MerossHttpClient
     from meross_iot.manager import MerossManager
+    from config import load_config
 
-    email = input("Meross email: ").strip()
-    password = input("Meross password: ").strip()
+    cfg = load_config(CONFIG_PATH)
+    email = cfg.meross_email
+    password = cfg.meross_password
 
+    print(f"Using credentials from config.yaml ({email})")
     print("\nConnecting…")
     http_client = await MerossHttpClient.async_from_user_password(
         api_base_url="https://iotx-us.meross.com",

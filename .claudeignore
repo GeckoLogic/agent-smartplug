@@ -1,0 +1,72 @@
+# ============================================================
+# Secrets & credentials — never expose to AI
+# ============================================================
+.env
+.env.local
+.env.*.local
+.env.development
+.env.production
+.env.staging
+.env.test
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+*.cer
+credentials.json
+service-account*.json
+secrets.json
+auth.json
+.netrc
+.htpasswd
+*_rsa
+*_dsa
+*_ed25519
+*_ecdsa
+
+# ============================================================
+# Dependencies — large, machine-managed
+# ============================================================
+node_modules/
+.venv/
+venv/
+env/
+__pycache__/
+*.pyc
+*.pyo
+
+# ============================================================
+# Build output — generated, not source
+# ============================================================
+.next/
+dist/
+build/
+out/
+*.tsbuildinfo
+next-env.d.ts
+
+# ============================================================
+# Lock files — machine-generated, noisy
+# ============================================================
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+poetry.lock
+Pipfile.lock
+Gemfile.lock
+
+# ============================================================
+# Test / coverage output
+# ============================================================
+coverage/
+.pytest_cache/
+.mypy_cache/
+htmlcov/
+
+# ============================================================
+# Logs
+# ============================================================
+*.log
+*.log.*
+npm-debug.log*

@@ -1,24 +1,106 @@
-# credentials and runtime state
+# ============================================================
+# Coding Agents
+# ============================================================
+.claude
+CLAUDE.md
+AGENTS.md
+SPEC.md
+run.bat
+.ai
+
+# ============================================================
+# Environment & secrets
+# ============================================================
+.env
+.env*
+*.pem
+.kaggle/
+.streamlit/secrets.toml
+
+# ============================================================
+# Node / JavaScript
+# ============================================================
+node_modules/
+.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+package-lock.json
+
+# Next.js
+.next/
+out/
+
+# Build output
+build/
+dist/
+
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts
+
+# Debug logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Vercel
+.vercel
+
+# ============================================================
+# Python
+# ============================================================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg
+*.egg-info/
+.eggs/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Testing
+.pytest_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+coverage/
+
+# ============================================================
+# Generated / large output files
+# ============================================================
+*.tmp
+*.log
+*.log.*
+
+# ============================================================
+# IDE & editors
+# ============================================================
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ============================================================
+# OS
+# ============================================================
+.DS_Store
+Thumbs.db
+
+# ============================================================
+# Project-specific
+# ============================================================
 config.yaml
 state.json
 meross_token.json
-
-# logs
-run.log
-run.log.1
-
-# mock data
 mock_states.json
-
-# Python
-__pycache__/
-*.py[cod]
-venv/
-.pytest_cache/
-
-# IDE
-.vscode/
-.idea/
-
-run.bat
-.claude
